@@ -4,7 +4,8 @@ import std.conv : to;
 
 struct
 TLen (L) {  // SIMD
-    L[2] xy;
+    enum N = 2;
+    L[N] xy;
 
     this (int x, int y) {
         xy[0] = x.to!L;
@@ -14,7 +15,8 @@ TLen (L) {  // SIMD
 
 struct
 TLoc (L) {  // SIMD
-    L[2] xy;
+    enum N = 2;
+    L[N] xy;
 
     auto x () { return xy[0]; }
     auto y () { return xy[1]; }
